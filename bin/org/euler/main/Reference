@@ -1,0 +1,89 @@
+Reference manual for solutions:
+-----------------------------------------------------------
+Note: All programs were created by William Chan
+
+**Updated as of February 3rd, 2019 at 10:45 PM
+
+This is a project consisting of the solutions of various algorithmic problems.
+These problems come from various sources which may be identified by the class
+name of the solution.
+
+Class names taking the form of "SNYYYY" come from the senior CCC (Canadian Computing Competition).
+Example: S12010.java is the solution for the first senior question from the year of 2010 written in Java.
+
+Class names taking the form of "JNYYYY" come from the junior CCC (Canadian Computing Competition).
+Example: J52018.java is the solution for the fifth junior question from the year of 2018 written in Java.
+
+Class names taking the form of "ProblemN" come from the website Project Euler.
+Example: Problem32.java is the solution for the 32nd problem on Project Euler written in Java.
+
+Class names taking the form of "PCNNN" come from the book Programming Challenges (Steven S. Skiena).
+Example: PC282.java is the solution for problem 2.8.2 in Programming Challenges written in Java.
+
+Some notable solutions may have further remarks that I wish to express. That will be done here.
+It is also worth noting that Project Euler solutions prior to problem 17 are not posted here.
+However, there still may be additional remarks concerning them.
+
+The one exception to this is Problem 14, which has the class name "Collatz"
+
+Also, some solutions may not be complete. These solutions will be noted with a "**I**" at the top of the class.
+The latter statement above is a TODO.
+
+TODO: Any required files, such as large inputs for Project Euler problems should be included in a sub folder named
+"Requirements".
+
+Additional Remarks:
+
+Project Euler: Problem 14 (Collatz.java)
+
+	This solution was heavily optimized by building a look-up table to reduce the amount of recursions.
+
+Project Euler: Problem 15 (Problem15.java)
+
+	Note: 
+		There is no code written for this solution in this collection.
+	
+	This problem can trivially be solved by observing that the total length of the path remains invariant.
+	In fact, not only does the length remain invariant, so does the amount of "rights" and "downs". Thus,
+	we have a binary problem where we have a total of 40 steps to make of which 20 are right and 20 are down.
+	Therefore, the total amount of paths is 40 choose 20.
+	
+Project Euler: Problem 18 (Problem18.java)
+
+	Example of an optimized greedy algorithm. The naiive greedy algorithm would be to take the largest
+	number below you, starting from the top. The difference here is that this algorithm starts at the bottom
+	and changes the triangle.
+	
+Project Euler: Problem 20 (Problem20.java)
+
+	This problem was actually done in two parts. The numerical computation was done in Python as integers do not
+	overflow easy in Python. The sum of the digits was done in Java.
+	
+	Note: This was before I knew of the BigInteger class.
+	
+Project Euler: Problem 31 (Problem31.java)
+	
+	Solved elegantly using recursion.
+	
+Project Euler: Problem 51 (Problem51.java)
+
+	I was stuck on this problem for a while. That is, until a realized the following combinatorial fact:
+	
+	nC0 + nC1 + nC2 + nC3 + ... + nCn = 2^n
+	
+	The proof being that this counts the cardinality of the power-set of a distinct set with size n.
+	Specifically, every element has either the choice of being included in the subset, or not being
+	included in the subset. This can be reduced to the binary problem of finding the number of
+	combinations where there are 2 choices per item and n choices. Using the product law, this
+	is 2^n. This is 2^(n - 1) if you ignore the empty set.
+	
+	Because it can be represented as the latter in the above text (that is, as having two choices). We
+	can represent each choice in binary where 1s represet the item being chosen and 0s represent the item
+	being not chosen.
+	
+Programming Challenges/Project Euler: Problem 2.8.2/Problem 54 (PC282.java/Problem54.java)
+
+	This problem was quite annoying as its difficulty was mainly in implementation. However,
+	if there was a more clever solution, I was not aware of it.
+	
+	
