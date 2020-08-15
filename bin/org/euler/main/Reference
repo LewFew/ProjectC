@@ -50,7 +50,7 @@ Project Euler: Problem 15 (Problem15.java)
 	
 Project Euler: Problem 18 (Problem18.java)
 
-	Example of an optimized greedy algorithm. The naiive greedy algorithm would be to take the largest
+	Example of an optimized greedy algorithm. The naive greedy algorithm would be to take the largest
 	number below you, starting from the top. The difference here is that this algorithm starts at the bottom
 	and changes the triangle.
 	
@@ -78,7 +78,7 @@ Project Euler: Problem 51 (Problem51.java)
 	is 2^n. This is 2^(n - 1) if you ignore the empty set.
 	
 	Because it can be represented as the latter in the above text (that is, as having two choices). We
-	can represent each choice in binary where 1s represet the item being chosen and 0s represent the item
+	can represent each choice in binary where 1s represent the item being chosen and 0s represent the item
 	being not chosen.
 	
 Programming Challenges/Project Euler: Problem 2.8.2/Problem 54 (PC282.java/Problem54.java)
