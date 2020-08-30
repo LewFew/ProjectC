@@ -197,7 +197,7 @@ public class Problem60 {
 		}
 		//----------------
 		long deltaTime = System.nanoTime() - lastTime;	
-		System.out.println("Computed in " + ((deltaTime/1000000000)/60) + " minutes.");
+		System.out.println("Computed in " + ((double)(deltaTime/1000000000)/60.0) + " minutes.");
 	}
 
 }

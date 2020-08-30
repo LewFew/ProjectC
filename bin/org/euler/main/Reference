@@ -81,6 +81,47 @@ Project Euler: Problem 51 (Problem51.java)
 	can represent each choice in binary where 1s represent the item being chosen and 0s represent the item
 	being not chosen.
 	
+Project Euler: Problem 63 (Problem63.java)
+
+	Notice that the smallest n+1st digit number is 10^n. So if there exists an n-digit,
+	nth power it must be the case that 9^n is an n digit number. Hence, 9^n must be
+	greater or equal to the smallest nth digit number. Then we have for n >= 1
+	
+		9^n >= 10^(n-1)
+	<=> nln(9) >= (n-1)ln(10)
+	<=> (n-1)/n <= ln(9)/ln(10)
+	
+	Consider the increasing function f(x) = (x-1)/x and see that
+	
+		f(x) = ln(9)/ln(10) 
+	<=> (x-1)/x = ln(9)/ln(10)
+	<=> x-1 = xln(9)/ln(10)
+	<=> x(ln(9)/ln(10) - 1) = -1
+	<=> x = 1/(1 - ln(9)/ln(10))
+	
+	Because f(x) is increasing, any n > x will be such that (n-1)/n > ln(9)/ln(10).
+	So we count the integers n with n >= 1 such that f(n) <= ln(9)/ln(10). These are
+	exactly the integers 1 <= n <= floor(1/(1-ln(9)/ln(10))). We see that 
+	1/(1-ln(9)/ln(10)) ~ 21.85 so we want the numbers 1 <= n <= 21 for which there
+	are 21.
+	
+	Additionally, any nth digit nth power will occur with a base < 10. So we case
+	each digit 1 through 21 and check each base 1 through 9 to see if it has n digits.
+	
+Project Euler: Problem 67
+
+	The brute force approach was not used is problem 18, so the same code can be
+	reused here on a far larger input.
+	
+Project Euler: Problem 72
+
+	Pretty cool, notice that we always have 1 <= phi(n) <= n, so the number of fractions
+	of reduced form with denominator n between 0 and 1 is phi(n). So we simply sum
+	phi(1) + phi(2) + ... + phi(1000000)
+	Like many previous problems, we use a "prime iterator", where we keep track of
+	both a list and set of previously found primes to optimize both finding new primes
+	and prime factoring.
+	
 Programming Challenges/Project Euler: Problem 2.8.2/Problem 54 (PC282.java/Problem54.java)
 
 	This problem was quite annoying as its difficulty was mainly in implementation. However,
